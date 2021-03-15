@@ -1,0 +1,18 @@
+:root {
+    --def-border: #1698D9;
+    --def-border-hover: #2EA8E6;
+    --border-sel: #D91667;
+    --border-sel-hover: #E52E7A;
+}
+
+@font-face {
+    font-family: 'Exo Thin';
+    src: url('../fonts/Exo2.0-Thin.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Exo Thin', Arial, sans-serif;
+}
