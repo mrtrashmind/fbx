@@ -3,6 +3,7 @@
     --def-border-hover: #2EA8E6;
     --border-sel: #D91667;
     --border-sel-hover: #E52E7A;
+    --card-back: #F2F2F2;
 }
 
 @font-face {
@@ -14,5 +15,162 @@
 }
 
 * {
-    font-family: 'Exo Thin', Arial, sans-serif;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
 }
+
+@import 'libs/bootstrap-reboot.min';
+
+.kitekat {
+    height: 100vh;
+
+    background: black ;
+
+    h1, h2 {
+        margin-bottom: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+    }
+    &__title {
+        font-family: 'Exo Thin';
+        font-size: 36px;
+        line-height: 44px;
+
+        color: #F2F2F2;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 80px;
+
+        margin-top: 25px;
+    }
+    &__card {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        &-wrapper {
+            position: absolute;
+
+            padding-top: 21px;
+            padding-left: 51px;
+        }
+        &-title {
+            font-size: 48px;
+            line-height: 56px;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #666666;
+    }
+    &__taste {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    &__descr {
+        margin-top: 15px;
+
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #666666;
+        span {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #666666;
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: 37px;
+        left: 0;
+
+        border: none;
+        border-left: 4px solid transparent;
+        border-radius: 0 0 0 12px;
+        overflow: hidden;
+    }
+    &__round {
+        position: absolute;
+        right: 16px;
+        bottom: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 80px;
+        height: 80px;
+        
+        border-radius: 100%;
+
+        background: var(--def-border);
+
+        font-size: 42px;
+        line-height: 1;
+
+        color: #F2F2F2;
+        span {
+            display: block;
+
+            font-size: 21px;
+        }
+    }
+    &__buy {
+        margin-top: 14px;
+
+        font-size: 13px;
+
+        color: #ffffff;
+
+        text-align: center;
+        //Подчеркивание через бэкграунд работает только с инлайн
+        span {
+            font-size: 13px;
+
+            color: var(--def-border);
+
+            background-image: linear-gradient(to right, var(--def-border) 50%, transparent 50%);
+            background-position: 0 1.04em;
+            background-repeat: repeat-x;
+            background-size: 6px 3px;
+
+            cursor: pointer;
+        }
+    }
+}
+
+.def-border-hover {
+    fill: var(--def-border-hover);
+}
+.def-round-hover {
+    background: var(--def-border-hover);
+}
+
+.active-svg {
+    fill: var(--border-sel);
+}
+.active-round {
+    background: var(--border-sel);
+}
+
+.hover-svg {
+    fill: var(--border-sel-hover);
+}
+.hover-round {
+    background: var(--border-sel-hover);
+}
+

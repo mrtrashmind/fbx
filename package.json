@@ -30,10 +30,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrtrashmind/funbox.git"
+    "url": "git+https://github.com/mrtrashmind/fbx.git"
   },
   "bugs": {
-    "url": "https://github.com/mrtrashmind/funbox/issues"
+    "url": "https://github.com/mrtrashmind/fbx/issues"
   },
-  "homepage": "https://github.com/mrtrashmind/funbox#readme"
+  "homepage": "https://github.com/mrtrashmind/fbx#readme"
 }
